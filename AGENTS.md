@@ -23,5 +23,6 @@ npm run lint
 ## Agent notes
 
 - Slack channel: `#client-demo`
+- Slack replies: use `slack-reply` skill (mrkdwn: `*bold*`, `•` bullets) — not Markdown
 - All PRs require Mennt human review before merge.
 - `autopr=false` on client channel for first 90 days.
