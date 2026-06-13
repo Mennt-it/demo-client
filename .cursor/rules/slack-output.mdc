@@ -3,12 +3,34 @@ description: Format all Slack @cursor replies with Slack mrkdwn, not Markdown. A
 alwaysApply: true
 ---
 
-# Slack output
+# Slack output (mandatory for every reply)
 
-When your reply will appear in **Slack** (via `@cursor`):
+You are replying via **Slack `@cursor`**. Slack cannot render Markdown tables.
 
-- Use Slack mrkdwn: `*bold*`, `•` bullets, `<url|label>` links
-- Do **not** use Markdown: `**bold**`, `## headings`, or `[text](url)`
-- **Never use tables** — no `| pipe |` rows. For CRM lists: `• *Name* · status · email`
+## Before you send any reply
 
-If your draft contains table pipes, rewrite before sending.
+1. Scan your draft for `|` characters used as table columns — **rewrite if found**
+2. Use `*bold*` not `**bold**`
+3. Use `•` bullets not markdown tables
+4. This applies to **Mennt Tool MCP results** (`crm_list`, `crm_get`, etc.) — not only code tasks
+
+## CRM list format (required)
+
+```
+*Mennt Tool — leads* (n)
+
+• *Company Name* · status · email
+• *Another Co* · status · email
+```
+
+## CRM detail format
+
+```
+*Lead: Company Name*
+
+• Status: new
+• Email: user@example.com
+• ID: `uuid-here`
+```
+
+Never format MCP JSON as a markdown table.
