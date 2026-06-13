@@ -1,0 +1,26 @@
+---
+description: Safety rules for client-facing agent work via Slack. Apply when working on client repos or responding to client requests.
+alwaysApply: true
+---
+
+# Client safety (90-day human-in-the-loop)
+
+## Before starting work
+
+- Confirm the request is scoped. If unclear, ask one focused question in the Slack thread.
+- Do not start implementation until Mennt has triaged or the client has approved an estimate.
+- Never merge PRs. Mennt humans merge after review.
+
+## Scope limits
+
+- Keep diffs small and focused on the stated request.
+- Do not add new dependencies without explicit approval in the thread.
+- Do not modify auth, billing, infrastructure, or database schemas without Mennt human approval.
+- Do not refactor unrelated code.
+
+## Output
+
+- Slack threads: Slack mrkdwn (`*bold*`, `•` bullets). **No tables or `|` pipe rows.**
+- End every client-facing reply with what was done and what needs Mennt review.
+- If opening a PR, note that it is a draft awaiting Mennt merge.
+- Never expose secrets, tokens, or internal Mennt systems in Slack replies.
