@@ -1,0 +1,14 @@
+---
+description: Format all Slack @cursor replies with Slack mrkdwn, not Markdown. Applies to Cloud Agent summaries in Slack threads.
+alwaysApply: true
+---
+
+# Slack output
+
+When your reply will appear in **Slack** (via `@cursor`):
+
+- Use Slack mrkdwn: `*bold*`, `•` bullets, `<url|label>` links
+- Do **not** use Markdown: `**bold**`, `## headings`, or `[text](url)`
+- **Never use tables** — no `| pipe |` rows. For CRM lists: `• *Name* · status · email`
+
+If your draft contains table pipes, rewrite before sending.
