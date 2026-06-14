@@ -27,6 +27,19 @@ Every user-visible reply — including Mennt Tool `crm_list` / `crm_get` results
 
 See `.cursor/skills/slack-reply/SKILL.md` for more examples.
 
+## Mennt Tool CRM (MCP only — never code)
+
+**Mennt Tool** is our CRM accessed via **MCP tools** (`crm_list`, `crm_get`, `crm_create`, …). It is **not** this repo and **not** the `mennt-tool` GitHub repo.
+
+For requests like "list leads", "show opportunities", "create lead":
+
+1. Use **Mennt Tool MCP** — call `crm_list` with `entity: leads` (or the right entity).
+2. **Do not** write code, open PRs, or explore `mennt-tool` / `AgentToolsService`.
+3. **Do not** implement missing features — this is a **read/query** task unless the user explicitly asks for code in **this** repo (`demo-client`).
+4. If Mennt Tool MCP tools are **not** in your tool list: reply that MCP is unavailable and ask Mennt to check Dashboard → Integrations & MCP. **Stop** — do not fall back to coding.
+
+**Slack prompt tip:** Avoid the phrase "in Mennt Tool" — Cursor may route to the wrong `mennt-tool` repo. Say `list leads` or `list leads via MCP`.
+
 ## Project
 
 - **Client:** Demo Client AS (sandbox)
